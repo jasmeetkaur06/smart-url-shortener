@@ -113,6 +113,8 @@ CREATE TABLE clicks (
 ![Analytics](screenshots/analytics.png)
 
 ---
+## 🌐 Live Demo
+👉 https://smart-url-shortener-p427.onrender.com
 
 ## 📄 License
 MIT — free to use and modify.
