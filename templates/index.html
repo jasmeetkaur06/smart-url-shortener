@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart URL Shortener</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <h1>🔗 Smart URL Shortener</h1>
+      <p>Shorten links. Track clicks. See analytics.</p>
+    </div>
+
+    <!-- Input Form -->
+    <div class="card">
+      <input
+        type="text"
+        id="urlInput"
+        placeholder="Paste your long URL here (https://...)"
+      />
+      <button id="shortenBtn" onclick="shortenURL()">Shorten It →</button>
+    </div>
+
+    <!-- Error Message -->
+    <div id="errorBox" class="error hidden"></div>
+
+    <!-- Result Box -->
+    <div id="resultBox" class="card result hidden">
+      <p class="label">Your Short URL:</p>
+      <div class="short-url-row">
+        <a id="shortLink" href="#" target="_blank"></a>
+        <button onclick="copyURL()">Copy</button>
+      </div>
+      <a id="analyticsLink" href="#" class="analytics-btn">
+        📊 View Analytics
+      </a>
+    </div>
+
+    <!-- History Table -->
+    <div id="historySection" class="card hidden">
+      <h3>🕘 This Session</h3>
+      <table id="historyTable">
+        <thead>
+          <tr>
+            <th>Original URL</th>
+            <th>Short URL</th>
+            <th>Analytics</th>
+          </tr>
+        </thead>
+        <tbody id="historyBody"></tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

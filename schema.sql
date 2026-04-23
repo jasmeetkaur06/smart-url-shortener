@@ -1,0 +1,14 @@
+CREATE TABLE IF NOT EXISTS urls (
+    id          INTEGER PRIMARY KEY AUTOINCREMENT,
+    original    TEXT    NOT NULL,
+    short_code  TEXT    NOT NULL UNIQUE,
+    created_at  DATETIME DEFAULT CURRENT_TIMESTAMP,
+    expires_at  DATETIME DEFAULT NULL,
+    click_count INTEGER DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS clicks (
+    id         INTEGER PRIMARY KEY AUTOINCREMENT,
+    short_code TEXT    NOT NULL,
+    clicked_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
